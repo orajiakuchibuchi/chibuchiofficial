@@ -624,7 +624,7 @@
                                                                         something went wrong </span>
                                                                 </div> -->
                                                                 <div class="col-sm-12 mt-5 ml-5"><button type="button"
-                                                                        class="btn" onclick="openSupport()">Contact me</button></div>
+                                                                        class="btn" onclick="openSupport()">Chat on whatsapp</button></div>
                                                             </div>
                                                         </form>
                                                     </div>
@@ -663,19 +663,23 @@
         }
 
     function openSupport(){
-            let button =document.getElementsByClassName("tawk-button");
-            console.log(button);
-            if(button){
-                button[0].click();
-                if(interv){
-                    clearInterval(interv);
-                    interv = null;
-                }
-            }else{
-                interv = setInterval(() => {
-                    openSupport();
-                }, 500);
-            }
+            // let button =document.getElementsByClassName("tawk-button");
+            // console.log(button);
+            // if(button){
+            //     button[0].click();
+            //     if(interv){
+            //         clearInterval(interv);
+            //         interv = null;
+            //     }
+            // }else{
+            //     interv = setInterval(() => {
+            //         openSupport();
+            //     }, 500);
+            // }
+            // https://wa.me/<
+            let url  = 'https://wa.me/+2347042361845';
+            e.preventDefault();
+            window.open(url, '_blank');
         }
     </script>
     <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
