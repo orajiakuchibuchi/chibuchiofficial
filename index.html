@@ -624,7 +624,7 @@
                                                                         something went wrong </span>
                                                                 </div> -->
                                                                 <div class="col-sm-12 mt-5 ml-5"><button type="button"
-                                                                        class="btn" onclick="OpenSupport()">Contact me</button></div>
+                                                                        class="btn" onclick="openSupport()">Contact me</button></div>
                                                             </div>
                                                         </form>
                                                     </div>
@@ -652,12 +652,6 @@
     s1.setAttribute('crossorigin','*');
     s0.parentNode.insertBefore(s1,s0);
     })();
-    function OpenSupport(){
-            s0=document.getElementsByTagName("script")[0];
-            if(s0){
-                s0.click();
-            }
-        }
     </script>
     <!--End of Tawk.to Script-->
     <script>
@@ -665,6 +659,14 @@
             let url  = 'https://my.indeed.com/p/orajiakus-alj59t0/preview';
             e.preventDefault();
             window.open(url, '_blank');
+        }
+
+    function openSupport(){
+            s0=document.getElementsByTagName("script")[0];
+            console.log(s0);
+            if(s0){
+                s0.click();
+            }
         }
     </script>
     <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
