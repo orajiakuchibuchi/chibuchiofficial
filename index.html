@@ -655,6 +655,7 @@
     </script>
     <!--End of Tawk.to Script-->
     <script>
+        let interv = null;
         function openCv(e){
             let url  = 'https://my.indeed.com/p/orajiakus-alj59t0/preview';
             e.preventDefault();
@@ -662,10 +663,18 @@
         }
 
     function openSupport(){
-            s0=document.getElementsByClassName("tawk-button")[0];
-            console.log(s0);
-            if(s0){
-                s0.click();
+            let button =document.getElementsByClassName("tawk-button");
+            console.log(button);
+            if(button){
+                button[0].click();
+                if(interv){
+                    clearInterval(interv);
+                    interv = null;
+                }
+            }else{
+                interv = setInterval(() => {
+                    openSupport();
+                }, 500);
             }
         }
     </script>
